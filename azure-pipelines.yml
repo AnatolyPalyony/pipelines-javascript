@@ -12,8 +12,8 @@ strategy:
   matrix:
     node_12_x:
       node_version: 12.x
-    node_13_x:
-      node_version: 13.x
+#    node_13_x:
+#      node_version: 13.x
 
 steps:
 - task: NodeTool@0
@@ -26,5 +26,5 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- script: npm test
+- script: mocha test --reporter mocha-junit-reporter
   displayName: 'junit test'
