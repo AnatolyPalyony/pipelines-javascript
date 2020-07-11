@@ -25,3 +25,6 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- script: mocha test --reporter mocha-junit-reporter
+  displayName: 'mocha junit test'
